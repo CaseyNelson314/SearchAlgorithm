@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f7acd31b-79b5-41d7-a190-906d5be59a36}</ProjectGuid>
-    <RootNamespace>SearchAlgorithm</RootNamespace>
+    <ProjectGuid>{d695fc6e-135e-4be9-a937-1018cbed1b53}</ProjectGuid>
+    <RootNamespace>HashMap</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -130,8 +130,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="binary_search.hpp" />
-    <ClInclude Include="linear_search.hpp" />
+    <ClInclude Include="chaining_hash.hpp" />
+    <ClInclude Include="open_addressing_hash.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
