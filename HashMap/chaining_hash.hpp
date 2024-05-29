@@ -29,11 +29,11 @@ public:
     {
         auto& chain = hash_table.at(hash(key));  // ハッシュ値よりチェインを取得
 
-        for (auto it = std::begin(chain.values); it != std::end(chain.values); ++it)
+        for (auto& v : chain.values)
         {
-            if (*it == value)
+            if (v == value)
             {
-                return *it;
+                return v;
             }
         }
 

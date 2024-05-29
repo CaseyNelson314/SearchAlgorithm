@@ -1,32 +1,28 @@
 #pragma once
 
-#include <thread>
-
 /**
- *   @brief “ñ•ª’Tõ
+ *   @brief äºŒåˆ†æ¢ç´¢
  */
 template <typename InputIterator>
 InputIterator binary_search(InputIterator begin, InputIterator end, int value)
 {
+    if (begin == end)
+    {
+        return end;  // çµ‚ç«¯ã«åˆ°é” äºŒåˆ†æ¢ç´¢ã¯ç™ºè¦‹ã™ã‚‹å ´åˆã®åˆ†å²ãŒæœ€ã‚‚æ·±ããªã‚‹ãŸã‚ã€end ã‚’è¿”ã—ã¦ã‚‚OK (ç„¡è¦–ã•ã‚Œã‚‹)
+    }
 
-	std::this_thread::sleep_for(std::chrono::nanoseconds(100));  // 1•b‘Ò‹@
-	if (begin == end)
-	{
-		return end;  // I’[‚É“’B “ñ•ª’Tõ‚Í”­Œ©‚·‚éê‡‚Ì•ªŠò‚ªÅ‚à[‚­‚È‚é‚½‚ßAend ‚ğ•Ô‚µ‚Ä‚àOK (–³‹‚³‚ê‚é)
-	}
+    InputIterator center = begin + (end - begin) / 2;
 
-	InputIterator center = begin + (end - begin) / 2;
-
-	if (*center == value)
-	{
-		return center;  // ”­Œ©
-	}
-	else if (*center < value)
-	{
-		return binary_search(center + 1, end, value);  // ‰E‘¤‚ğ’Tõ
-	}
-	else
-	{
-		return binary_search(begin, center, value);  // ¶‘¤‚ğ’Tõ
-	}
+    if (*center == value)
+    {
+        return center;  // ç™ºè¦‹
+    }
+    else if (*center < value)
+    {
+        return binary_search(center + 1, end, value);  // å³å´ã‚’æ¢ç´¢
+    }
+    else
+    {
+        return binary_search(begin, center, value);  // å·¦å´ã‚’æ¢ç´¢
+    }
 }

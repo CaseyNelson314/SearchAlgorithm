@@ -1,36 +1,17 @@
 #pragma once
 
-
 /**
- *   @brief üŒ`’Tõ
+ *   @brief ç·šå½¢æ¢ç´¢
  */
 template <typename InputIterator>
 InputIterator linear_search(InputIterator begin, InputIterator end, int value)
 {
-	for (auto it = begin; it != end; ++it)
-	{
-		if (*it == value)
-		{
-			return it;  // ”­Œ©
-		}
-	}
-	return end;
-}
-
-
-/**
- *   @brief üŒ`’Tõ / •º”Ô–@
- */
-template <typename InputIterator>
-InputIterator linear_sentinel_search(InputIterator begin, int value)
-{
-	for (auto it = begin; ; ++it)  // I’[‚Ü‚Å‚É‚Í•K‚¸Œ©‚Â‚©‚é‘O’ñ
-	{
-		if (*it == value)
-		{
-			return it;  // ”­Œ©
-		}
-	}
-
-	return {};  // not reached
+    for (auto it = begin; it != end; ++it)
+    {
+        if (*it == value)
+        {
+            return it;  // ç™ºè¦‹
+        }
+    }
+    return end;
 }

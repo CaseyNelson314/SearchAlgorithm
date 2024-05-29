@@ -3,6 +3,7 @@
 # https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 *.exe
+*.csv
 
 # User-specific files
 *.rsuser
